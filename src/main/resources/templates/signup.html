@@ -1,0 +1,29 @@
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Custom sign up Page</title>
+</head>
+<body>
+<div>
+    <form name="f" th:action="@{/signed}" method="post" @ModelAttribute="userr">
+        <fieldset>
+            <legend>Please Sign up It's FREE</legend>
+            <div th:if="${param.error}" class="alert alert-error">
+                Invalid username and password.
+            </div>
+            <div th:if="${param.logout}" class="alert alert-success">
+                You have been logged out.
+            </div>
+            <label for="username">Username</label>
+            <input type="text" id="username" name="username"/>
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password"/>
+            <div class="form-actions">
+                <button type="submit" class="btn">Sign up</button>
+            </div>
+        </fieldset>
+    </form>
+    
+    <a href="/login" >Login</a>
+</div>
+</body>
+</html>
