@@ -1,17 +1,15 @@
-<!DOCTYPE HTML>
-<html xmlns:th="http://www.thymeleaf.org">
-
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+  xmlns:th="http://www.thymeleaf.org"
+  xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
 <head>
-	<link href = "css/styles.css" rel = "stylesheet"/>
-	<title>Thymeleaf Demo</title>
+<title>Security with Spring Boot</title>
 </head>
-
 <body>
-
-	<a href="/home">Nearby Shops</a>
-	<a href="/likedShops">My preferred Shops</a>
-	<p th:text="'Time on the server is ' + ${theDate}" />
-
+  <h1>Access is Denied!</h1>
+  <a style="color: blue" th:href="@{/}">Home</a>
+  <form th:action="@{/logout}" method="post">
+    <input type="submit" value="Sign Out" />
+  </form>
 </body>
-
 </html>
