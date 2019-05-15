@@ -9,7 +9,7 @@ public class ShopsController {
 
 	// create a mapping for "/hello"
 	
-		@GetMapping("/home")
+		/*@GetMapping("/home")
 		public String index(Model theModel) {
 			
 			theModel.addAttribute("theDate", new java.util.Date());
@@ -21,7 +21,7 @@ public class ShopsController {
 		public String liked(Model theModel) {
 			
 			return "myprefrred";
-		}
+		}*/
 		
 }
 
