@@ -12,7 +12,7 @@ import com.unitedremote.springboot.service.AuthorityService;
 import com.unitedremote.springboot.service.UserService;
 
 @Controller
-public class UserController {
+public class WebController {
 	
 	@RequestMapping(value="/")
     public String home(){
