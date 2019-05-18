@@ -19,7 +19,16 @@
 		<a href="/logout" class="btn btn-light" >Logout</a>
 	</span>
 	
-	<div>My favourite SHOPS</div>
+	<div class="container">
+		    <ul th:each = "shopliked:${shopListliked}">
+		        <li th:text="${shopliked.nom}"></li>
+		        <li id="pic"></li>
+		        <li>
+		        <a class="btn btn-danger" th:href="@{/likedShops/{id}(id=${shopliked.id})}">Remove</a>
+		        </li>
+		    </ul>
+	
+	</div>
 
 </body>
 
