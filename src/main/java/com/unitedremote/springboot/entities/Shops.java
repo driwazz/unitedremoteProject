@@ -4,8 +4,10 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.Table;
 
 @Entity
+@Table(name="shops")
 public class Shops {
 	
 	@Id
@@ -13,9 +15,17 @@ public class Shops {
 	private Long id;
 	private String nom;
 	private boolean liked;
+	private String username;
+	
 	
 	public Shops() {
 		super();
+	}
+	public Shops(String nom, boolean liked, String username) {
+		super();
+		this.nom = nom;
+		this.liked = liked;
+		this.username = username;
 	}
 	public Shops(Long id, String nom, boolean liked) {
 		super();
@@ -42,7 +52,12 @@ public class Shops {
 		this.liked = liked;
 	}
 	
-	
+	public String getUsername() {
+		return username;
+	}
+	public void setUsername(String username) {
+		this.username = username;
+	}
 	
 	
 }
